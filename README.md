@@ -7,7 +7,12 @@ O plugin está em [`plugins/rica-pro`](plugins/rica-pro). Lá estão a descriç�
 ## Instalar no Claude Code
 
 ```text
-/plugin marketplace add felipebzreis/rica-pro-plugin
+/plugin marketplace add https://github.com/felipebzreis/rica-pro-plugin.git
+```
+
+Depois, num segundo comando:
+
+```text
 /plugin install rica-pro@rica
 ```
 
@@ -16,7 +21,7 @@ Na primeira consulta, o Claude Code abre o login da Rica no navegador.
 ## Instalar no Codex
 
 ```bash
-codex plugin marketplace add felipebzreis/rica-pro-plugin
+codex plugin marketplace add https://github.com/felipebzreis/rica-pro-plugin.git
 ```
 
 Depois, instale a Rica Pro na lista de plugins do aplicativo.
