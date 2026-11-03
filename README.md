@@ -32,7 +32,8 @@ Depois, instale a Rica Pro na lista de plugins do aplicativo.
 | --- | --- |
 | `plugins/rica-pro/skills/` | Skills compartilhadas pelas duas plataformas |
 | `plugins/rica-pro/.claude-plugin/plugin.json` e `.mcp.json` | Manifesto e conector do Claude |
-| `plugins/rica-pro/plugin.json` e `mcp.json` | Manifesto e conector da OpenAI (ChatGPT e Codex) |
+| `plugins/rica-pro/.codex-plugin/plugin.json` | Manifesto do Codex (usa o mesmo `.mcp.json`) |
+| `openai/plugin.json` e `openai/mcp.json` | Manifesto portátil da OpenAI, usado só no ZIP do diretório do ChatGPT |
 | `.claude-plugin/marketplace.json` | Marketplace do Claude Code |
 | `.agents/plugins/marketplace.json` | Marketplace do Codex |
 | `scripts/validar.sh` | Confere os manifestos e as skills |

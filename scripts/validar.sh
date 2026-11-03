@@ -15,15 +15,24 @@ def ler(p):
         erros.append(f"{p.relative_to(raiz)}: JSON inválido ({e})"); return {}
 
 claude = ler(plugin / ".claude-plugin/plugin.json")
-openai = ler(plugin / "plugin.json")
+codex = ler(plugin / ".codex-plugin/plugin.json")
+openai = ler(raiz / "openai/plugin.json")
 mcp_claude = ler(plugin / ".mcp.json")
-mcp_openai = ler(plugin / "mcp.json")
+mcp_openai = ler(raiz / "openai/mcp.json")
+
+# O Codex ignora .codex-plugin quando existe um plugin.json na raiz do plugin,
+# e aí não carrega o conector. O manifesto portátil da OpenAI fica em openai/.
+for proibido in ("plugin.json", "mcp.json"):
+    if (plugin / proibido).exists():
+        erros.append(f"plugins/rica-pro/{proibido} impede o Codex de carregar o conector; mantenha em openai/")
+if codex.get("mcpServers") != "./.mcp.json":
+    erros.append(".codex-plugin/plugin.json precisa de mcpServers = ./.mcp.json")
 ler(raiz / ".claude-plugin/marketplace.json")
 ler(raiz / ".agents/plugins/marketplace.json")
 
 for campo in ("name", "version", "license", "homepage", "repository"):
-    if claude.get(campo) != openai.get(campo):
-        erros.append(f"'{campo}' diferente entre os manifestos do Claude e da OpenAI")
+    if not (claude.get(campo) == openai.get(campo) == codex.get(campo)):
+        erros.append(f"'{campo}' diferente entre os manifestos do Claude, do Codex e da OpenAI")
 
 url_c = mcp_claude.get("mcpServers", {}).get("rica-pro", {}).get("url")
 url_o = mcp_openai.get("mcpServers", {}).get("rica-pro", {}).get("url")
