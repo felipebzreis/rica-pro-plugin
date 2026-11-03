@@ -1,6 +1,6 @@
 {
   "name": "rica-pro",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Atenda a carteira da Rica Pro pelo ChatGPT e pelo Codex: clientes, lançamentos, objetivos, metas, categorias e caixas, com login na Rica.",
   "author": {
     "name": "Social Rica",
@@ -26,7 +26,7 @@
   },
   "interface": {
     "displayName": "Rica Pro",
-    "shortDescription": "A carteira da Rica Pro no ChatGPT e no Codex.",
+    "shortDescription": "A carteira da Rica Pro",
     "longDescription": "Para planejadores financeiros que usam a Rica Pro. Consulte clientes, fluxo de caixa, categorias, patrimônio, objetivos e metas, prepare atendimentos e registre lançamentos, objetivos, categorias e caixas com confirmação. O login é feito na página da Rica e cada planejador vê só a própria carteira.",
     "developerName": "Social Rica",
     "category": "Finance",
@@ -35,6 +35,7 @@
       "Write"
     ],
     "websiteURL": "https://rica.com.br",
+    "supportURL": "https://base.pro.rica.com.br/ajuda",
     "privacyPolicyURL": "https://socialrica.com.br/politicadeprivacidade",
     "termsOfServiceURL": "https://socialrica.com.br/termosdeuso",
     "defaultPrompt": [

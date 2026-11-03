@@ -40,7 +40,9 @@ if not url_c or url_c != url_o or not url_c.startswith("https://"):
     erros.append(f"URL do conector diferente ou fora de https: {url_c} x {url_o}")
 
 iface = openai.get("extensions", {}).get("com.openai", {}).get("interface", {})
-for campo in ("websiteURL", "privacyPolicyURL", "termsOfServiceURL"):
+if len(iface.get("shortDescription", "")) > 30:
+    erros.append("interface.shortDescription passa de 30 caracteres (limite do painel da OpenAI)")
+for campo in ("websiteURL", "supportURL", "privacyPolicyURL", "termsOfServiceURL"):
     if not str(iface.get(campo, "")).startswith("https://"):
         erros.append(f"interface.{campo} ausente ou fora de https")
 for campo in ("composerIcon", "logo"):
