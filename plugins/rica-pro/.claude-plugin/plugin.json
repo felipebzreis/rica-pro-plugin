@@ -1,7 +1,7 @@
 {
   "name": "rica-pro",
   "displayName": "Rica Pro",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Atenda a carteira da Rica Pro pelo Claude: clientes, lançamentos, objetivos, metas, categorias e caixas, com login na Rica.",
   "author": {
     "name": "Social Rica",

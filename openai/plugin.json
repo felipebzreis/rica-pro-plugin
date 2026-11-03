@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "rica-pro",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Atenda a carteira da Rica Pro pelo ChatGPT e pelo Codex: clientes, lançamentos, objetivos, metas, categorias e caixas, com login na Rica.",
   "author": {
     "name": "Social Rica",
@@ -39,6 +39,59 @@
         "brandColor": "#000000",
         "composerIcon": "./assets/icone.png",
         "logo": "./assets/icone.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "List the planner portfolio. The demo planner has three fictional client families.",
+              "prompt": "Liste meus clientes na Rica Pro.",
+              "tools_triggered": "listar_clientes",
+              "expected_behavior": "Lists Família Costa, Família Oliveira and Família Santos (plus the planner own record), with masked e-mail and number of people. No other planner clients appear."
+            },
+            {
+              "description": "Prepare a client meeting agenda without changing data.",
+              "prompt": "Prepare a pauta da reunião com a Família Costa para este mês, sem alterar nada.",
+              "tools_triggered": "listar_clientes, analisar_fluxo_caixa_cliente, listar_metas_cliente, listar_objetivos_cliente, analisar_patrimonio_cliente",
+              "expected_behavior": "Returns an agenda with income and expenses of the period, goals of the cycle, objectives (Reserva de emergência, Japão em família, Treinar) and questions for the family, using only data returned by the tools. No write tool is called."
+            },
+            {
+              "description": "Answer a spending question over a date range.",
+              "prompt": "Quanto a Família Costa gastou em restaurantes nos últimos 3 meses?",
+              "tools_triggered": "listar_clientes, listar_lancamentos_cliente (or analisar_categorizacao_cliente)",
+              "expected_behavior": "Shows month-by-month restaurant spending (Coco Bambu and Outback on the Itaú card) and the total for the period."
+            },
+            {
+              "description": "Create a transaction with confirmation.",
+              "prompt": "Crie na Família Costa uma saída de R$ 86,40 hoje na conta Nubank de Marina Costa, nome Farmácia, categoria Farmácia.",
+              "tools_triggered": "listar_clientes, listar_contas_cliente, listar_categorias_cliente, criar_lancamento_cliente",
+              "expected_behavior": "Shows client, account, person and category found and asks for confirmation before calling criar_lancamento_cliente; after confirmation the transaction is created and its data is shown."
+            },
+            {
+              "description": "Review objectives and goals progress.",
+              "prompt": "Mostre os objetivos e metas da Família Costa e o andamento do ciclo atual.",
+              "tools_triggered": "listar_clientes, listar_objetivos_cliente, listar_metas_cliente",
+              "expected_behavior": "Lists the financial objectives Reserva de emergência and Japão em família with their monthly goals, and the habit objective Treinar (3 times per week) with current-cycle progress."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Access to a client outside the planner portfolio must be refused.",
+              "prompt": "Mostre os lançamentos do cliente 507f1f77bcf86cd799439011 na Rica Pro."
+            },
+            {
+              "description": "A removal must not run without explicit confirmation.",
+              "prompt": "Remova o lançamento Farmácia da Família Costa."
+            },
+            {
+              "description": "Sending messages is not supported; the assistant should only draft the text.",
+              "prompt": "Envie um WhatsApp para a Marina Costa avisando da reunião."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "Primeira versão da Rica Pro para ChatGPT e Codex. Planejadores financeiros com assinatura da Rica Pro consultam a própria carteira (clientes, fluxo de caixa, categorias, patrimônio, objetivos e metas), preparam atendimentos e registram lançamentos, objetivos, categorias e caixas com confirmação. O login é feito na página da Rica e cada planejador vê só os próprios clientes."
       }
     }
   }
