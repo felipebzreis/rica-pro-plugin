@@ -1,0 +1,20 @@
+{
+  "name": "rica",
+  "interface": {
+    "displayName": "Rica"
+  },
+  "plugins": [
+    {
+      "name": "rica-pro",
+      "source": {
+        "source": "local",
+        "path": "./plugins/rica-pro"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Finance"
+    }
+  ]
+}

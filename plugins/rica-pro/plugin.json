@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rica-pro",
+  "version": "1.0.0",
+  "description": "Atenda a carteira da Rica Pro pelo ChatGPT e pelo Codex: clientes, lançamentos, objetivos, metas, categorias e caixas, com login na Rica.",
+  "author": {
+    "name": "Social Rica",
+    "email": "contato@socialrica.com.br",
+    "url": "https://rica.com.br"
+  },
+  "homepage": "https://base.pro.rica.com.br/mcp-rica-pro",
+  "repository": "https://github.com/felipebzreis/rica-pro",
+  "license": "MIT",
+  "keywords": ["rica", "planejamento financeiro", "planejador", "consultoria financeira", "finanças pessoais"],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/primeiros-passos/SKILL.md",
+      "interface": {
+        "displayName": "Rica Pro",
+        "shortDescription": "A carteira da Rica Pro no ChatGPT e no Codex.",
+        "longDescription": "Para planejadores financeiros que usam a Rica Pro. Consulte clientes, fluxo de caixa, categorias, patrimônio, objetivos e metas, prepare atendimentos e registre lançamentos, objetivos, categorias e caixas com confirmação. O login é feito na página da Rica e cada planejador vê só a própria carteira.",
+        "developerName": "Social Rica",
+        "category": "Finance",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://rica.com.br",
+        "privacyPolicyURL": "https://socialrica.com.br/politicadeprivacidade",
+        "termsOfServiceURL": "https://socialrica.com.br/termosdeuso",
+        "defaultPrompt": "Liste meus clientes na Rica Pro e me diga quais pedem atenção esta semana.",
+        "brandColor": "#000000",
+        "composerIcon": "./assets/icone.png",
+        "logo": "./assets/icone.png"
+      }
+    }
+  }
+}

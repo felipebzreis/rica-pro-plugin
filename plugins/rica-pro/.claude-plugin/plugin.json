@@ -1,0 +1,22 @@
+{
+  "name": "rica-pro",
+  "displayName": "Rica Pro",
+  "version": "1.0.0",
+  "description": "Atenda a carteira da Rica Pro pelo Claude: clientes, lançamentos, objetivos, metas, categorias e caixas, com login na Rica.",
+  "author": {
+    "name": "Social Rica",
+    "email": "contato@socialrica.com.br",
+    "url": "https://rica.com.br"
+  },
+  "homepage": "https://base.pro.rica.com.br/mcp-rica-pro",
+  "privacyPolicyUrl": "https://socialrica.com.br/politicadeprivacidade",
+  "repository": "https://github.com/felipebzreis/rica-pro",
+  "license": "MIT",
+  "keywords": [
+    "rica",
+    "planejamento financeiro",
+    "planejador",
+    "consultoria financeira",
+    "finanças pessoais"
+  ]
+}
