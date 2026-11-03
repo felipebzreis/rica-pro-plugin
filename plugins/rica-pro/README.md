@@ -31,14 +31,14 @@ O plugin não roda código na sua máquina. Ele só declara o conector remoto da
 No Claude Code:
 
 ```text
-/plugin marketplace add felipebzreis/rica-pro
+/plugin marketplace add felipebzreis/rica-pro-plugin
 /plugin install rica-pro@rica
 ```
 
 No Codex:
 
 ```bash
-codex plugin marketplace add felipebzreis/rica-pro
+codex plugin marketplace add felipebzreis/rica-pro-plugin
 ```
 
 Depois, instale a Rica Pro pela lista de plugins do aplicativo.
