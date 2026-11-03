@@ -24,7 +24,17 @@ Na primeira consulta, o Claude Code abre o login da Rica no navegador.
 codex plugin marketplace add https://github.com/felipebzreis/rica-pro-plugin.git
 ```
 
-Depois, instale a Rica Pro na lista de plugins do aplicativo.
+Depois, instale o plugin e entre com a conta da Rica Pro:
+
+```bash
+codex plugin add rica-pro@rica
+```
+
+```bash
+codex mcp login rica-pro
+```
+
+O segundo comando abre o login da Rica no navegador. Feito o login, abra uma sessão nova do Codex. O Codex de terminal ainda não abre esse login sozinho na conversa.
 
 ## Estrutura
 

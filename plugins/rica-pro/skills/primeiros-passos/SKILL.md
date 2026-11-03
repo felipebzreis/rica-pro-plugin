@@ -1,6 +1,6 @@
 ---
 name: primeiros-passos
-description: Conecta a Rica Pro, confere o acesso à carteira e resolve erros de login, plano, permissão ou cliente. Use na primeira vez que o planejador usa a Rica Pro, quando uma ferramenta da Rica Pro responder com erro ou quando ele perguntar o que a Rica Pro faz.
+description: Conecta a Rica Pro, confere o acesso à carteira e resolve erros de login, plano, permissão ou cliente. Use na primeira vez que o planejador usa a Rica Pro, quando as ferramentas da Rica Pro não aparecerem na sessão, quando uma delas responder com erro ou quando ele perguntar o que a Rica Pro faz.
 ---
 
 # Primeiros passos com a Rica Pro
@@ -12,6 +12,16 @@ A Rica Pro dá acesso à carteira do planejador: clientes, estruturas, lançamen
 1. Chame `listar_clientes`. Mostre nome, e-mail mascarado e quantidade de pessoas de cada cliente.
 2. Se a lista vier, a conexão está pronta. Diga em uma frase o que dá para fazer: preparar atendimentos, revisar a carteira, registrar lançamentos, montar objetivos e metas e organizar categorias e caixas.
 3. Se vier erro, use a tabela abaixo.
+
+## Se as ferramentas da Rica Pro não aparecerem
+
+Sem `listar_clientes` disponível, a conexão ainda não foi autorizada. Os dados da Rica só vêm pelo conector: não abra a Rica no navegador nem tente ler as telas para responder.
+
+- **Codex (terminal ou IDE):** peça ao planejador para rodar no terminal `codex mcp login rica-pro`, entrar com a conta da Rica Pro na página que abrir e começar uma sessão nova do Codex. Se você puder rodar comandos, ofereça rodar esse comando por ele: o navegador abre sozinho.
+- **Claude Code:** a autorização abre pelo próprio conector na primeira chamada. Se não abrir, peça para rodar `/mcp`, escolher `rica-pro` e autenticar.
+- **Claude ou ChatGPT (web e desktop):** em Conectores ou Aplicativos, conectar a Rica Pro e entrar com a conta da Rica.
+
+Depois do login, chame `listar_clientes` de novo.
 
 ## Regras que valem em toda tarefa
 

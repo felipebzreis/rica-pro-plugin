@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "rica-pro",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Atenda a carteira da Rica Pro pelo ChatGPT e pelo Codex: clientes, lançamentos, objetivos, metas, categorias e caixas, com login na Rica.",
   "author": {
     "name": "Social Rica",
