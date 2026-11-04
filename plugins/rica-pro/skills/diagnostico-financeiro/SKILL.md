@@ -27,7 +27,7 @@ Confirme o cliente com `listar_clientes`. Depois:
 
 ## 4. Previdência e proteção
 
-`listar_previdencia_social_cliente`, `obter_matriz_previdenciaria_cliente`, `analisar_cnis_cliente`, `analisar_restituicao_cliente`, `analisar_protecao_renda_cliente` e `analisar_otimizacao_prolabore_cliente` dizem o que está cadastrado e disponível. Os cálculos completos ficam no Estúdio: indique a análise e onde abrir, sem refazer contas previdenciárias por conta própria.
+`listar_previdencia_social_cliente` diz quais análises previdenciárias estão cadastradas (matriz, CNIS, restituição, pró-labore). Para proteção de renda, use `analisar_patrimonio_cliente` junto com essa lista. Os cálculos completos ficam no Estúdio: indique a análise e onde abrir, sem refazer contas previdenciárias por conta própria.
 
 ## Entrega
 

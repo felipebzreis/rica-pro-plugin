@@ -6,7 +6,7 @@ Plugin oficial da [Rica Pro](https://rica.com.br) para planejadores financeiros.
 
 ## O que vem no plugin
 
-- **Conector Rica Pro**: servidor MCP remoto em `https://pro.mcp.rica.com.br/mcp`, com 91 ferramentas (58 de consulta e 33 de alteração).
+- **Conector Rica Pro**: servidor MCP remoto em `https://pro.mcp.rica.com.br/mcp`, com 83 ferramentas (50 de consulta e 33 de alteração).
 - **Skills** com os roteiros do planejador:
   - `primeiros-passos`: conectar, conferir o acesso e resolver erros;
   - `preparar-atendimento`: pauta, consultas durante a reunião e resumo depois;

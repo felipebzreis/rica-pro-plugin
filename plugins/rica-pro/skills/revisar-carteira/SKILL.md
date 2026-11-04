@@ -16,7 +16,7 @@ description: Revisa a carteira inteira do planejador na Rica Pro, com clientes s
 3. Para a consultoria como um todo:
    - `listar_pipeline_consultoria`, `listar_contatos_consultoria` e `listar_atendimentos_consultoria`: quem está no funil e quem espera resposta;
    - `listar_lembretes_consultoria` e `listar_agentes_consultoria`: acompanhamentos combinados;
-   - Office: `obter_indicadores_atividade_office`, `listar_afiliados_office` e `listar_filiadas_office`.
+   - Office: `obter_indicadores_atividade_office` e `listar_afiliados_office` (afiliados e filiadas).
 4. Entregue uma ficha curta por cliente, ordenada pelo que pede ação primeiro.
 
 Carteiras grandes: diga quantos clientes faltam e pergunte antes de seguir, em vez de consultar todos de uma vez.
