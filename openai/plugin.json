@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "rica-pro",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Atenda a carteira da Rica Pro pelo ChatGPT e pelo Codex: clientes, lançamentos, objetivos, metas, categorias e caixas, com login na Rica.",
   "author": {
     "name": "Social Rica",
@@ -88,7 +88,8 @@
               "prompt": "Envie um WhatsApp para a Marina Costa avisando da reunião."
             }
           ]
-        }
+        },
+        "demo_recording_url": "https://genterica.blob.core.windows.net/arquivos/plugins/rica-pro/rica-pro-walkthrough-1.0.mp4"
       },
       "publication": {
         "release_notes": "Primeira versão da Rica Pro para ChatGPT e Codex. Planejadores financeiros com assinatura da Rica Pro consultam a própria carteira (clientes, fluxo de caixa, categorias, patrimônio, objetivos e metas), preparam atendimentos e registram lançamentos, objetivos, categorias e caixas com confirmação. O login é feito na página da Rica e cada planejador vê só os próprios clientes."
