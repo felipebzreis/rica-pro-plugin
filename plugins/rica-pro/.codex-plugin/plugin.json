@@ -1,6 +1,6 @@
 {
   "name": "rica-pro",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Atenda a carteira da Rica Pro pelo ChatGPT e pelo Codex: clientes, lançamentos, objetivos, metas, categorias e caixas, com login na Rica.",
   "author": {
     "name": "Social Rica",
@@ -19,6 +19,7 @@
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
+  "apps": "./.app.json",
   "extensions": {
     "com.openai": {
       "onboardingSkill": "./skills/primeiros-passos/SKILL.md"

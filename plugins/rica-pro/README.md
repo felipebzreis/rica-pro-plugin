@@ -46,17 +46,13 @@ No Codex:
 codex plugin marketplace add https://github.com/felipebzreis/rica-pro-plugin.git
 ```
 
-Depois, instale o plugin e entre com a conta da Rica Pro:
+Depois, instale o plugin:
 
 ```bash
 codex plugin add rica-pro@rica
 ```
 
-```bash
-codex mcp login rica-pro
-```
-
-O segundo comando abre o login da Rica no navegador. Feito o login, abra uma sessão nova do Codex. O Codex de terminal ainda não abre esse login sozinho na conversa.
+O plugin usa o app **Rica Pro** aprovado no diretório do ChatGPT. Na instalação, o Codex pede para conectar o app e abre o login da Rica; se a Rica Pro já estiver conectada no seu ChatGPT (https://chatgpt.com/apps/rica-pro/asdk_app_6aea64fc0da08191b3a4c094c41ddf2d), não há passo extra. Feito o login, abra uma sessão nova do Codex.
 
 No Claude (web e desktop) e no ChatGPT, procure **Rica Pro** no diretório de conectores e plugins ou adicione o conector personalizado `https://pro.mcp.rica.com.br/mcp`.
 

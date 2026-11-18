@@ -27,6 +27,15 @@ for proibido in ("plugin.json", "mcp.json"):
         erros.append(f"plugins/rica-pro/{proibido} impede o Codex de carregar o conector; mantenha em openai/")
 if codex.get("mcpServers") != "./.mcp.json":
     erros.append(".codex-plugin/plugin.json precisa de mcpServers = ./.mcp.json")
+# O app aprovado no diretório da OpenAI faz o Codex abrir o login sozinho.
+app = ler(plugin / ".app.json")
+app_id = app.get("apps", {}).get("rica-pro", {}).get("id", "")
+if not app_id.startswith("asdk_app_"):
+    erros.append(".app.json sem o id do app aprovado (asdk_app_...)")
+if codex.get("apps") != "./.app.json":
+    erros.append(".codex-plugin/plugin.json precisa de apps = ./.app.json")
+if openai.get("extensions", {}).get("com.openai", {}).get("apps") != "./.app.json":
+    erros.append("openai/plugin.json precisa de extensions.com.openai.apps = ./.app.json")
 ler(raiz / ".claude-plugin/marketplace.json")
 ler(raiz / ".agents/plugins/marketplace.json")
 

@@ -17,7 +17,7 @@ A Rica Pro dá acesso à carteira do planejador: clientes, estruturas, lançamen
 
 Sem `listar_clientes` disponível, a conexão ainda não foi autorizada. Os dados da Rica só vêm pelo conector: não abra a Rica no navegador nem tente ler as telas para responder.
 
-- **Codex (terminal ou IDE):** peça ao planejador para rodar no terminal `codex mcp login rica-pro`, entrar com a conta da Rica Pro na página que abrir e começar uma sessão nova do Codex. Se você puder rodar comandos, ofereça rodar esse comando por ele: o navegador abre sozinho.
+- **Codex (terminal ou IDE):** peça ao planejador para conectar o app Rica Pro do ChatGPT (https://chatgpt.com/apps/rica-pro/asdk_app_6aea64fc0da08191b3a4c094c41ddf2d), entrar com a conta da Rica Pro e começar uma sessão nova do Codex. Se o app já estiver conectado e as ferramentas continuarem ausentes, desconecte e conecte o app de novo no ChatGPT.
 - **Claude Code:** a autorização abre pelo próprio conector na primeira chamada. Se não abrir, peça para rodar `/mcp`, escolher `rica-pro` e autenticar.
 - **Claude ou ChatGPT (web e desktop):** em Conectores ou Aplicativos, conectar a Rica Pro e entrar com a conta da Rica.
 

@@ -12,6 +12,6 @@ destino="$raiz/dist/rica-pro-openai-$versao.zip"
 rm -f "$destino"
 # plugin.json e mcp.json vêm de openai/; o resto, da pasta do plugin.
 (cd "$raiz/openai" && zip -qX "$destino" plugin.json mcp.json)
-(cd "$plugin" && zip -qrX "$destino" README.md LICENSE skills assets -x '*.DS_Store' -x '__MACOSX/*')
+(cd "$plugin" && zip -qrX "$destino" README.md LICENSE .app.json skills assets -x '*.DS_Store' -x '__MACOSX/*')
 echo "$destino"
 unzip -l "$destino" | tail -n +4 | sed '$d' | sed '$d' | awk '{print "  " $4}'
